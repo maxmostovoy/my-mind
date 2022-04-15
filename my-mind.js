@@ -1882,6 +1882,47 @@
     }
   };
 
+  var ServerFilesUI = class extends BackendUI {
+    constructor() {
+      super(new File(), "File");
+      fill(this.format);
+      this.format.value = localStorage.getItem(this.prefix + "format") || "native";
+    }
+    get format() {
+      return this.node.querySelector(".format");
+    }
+    show(mode2) {
+      super.show(mode2);
+      this.go.textContent = mode2 == "save" ? "Save" : "Browse";
+    }
+    save() {
+      let format = repo6.get(this.format.value);
+      var json = currentMap.toJSON();
+      var data = format.to(json);
+      var name = currentMap.name + "." + format.extension;
+      try {
+        this.backend.save(data, name);
+        this.saveDone();
+      } catch (e) {
+        this.error(e);
+      }
+    }
+    async load() {
+      try {
+        let data = await this.backend.load();
+        let format = getByName(data.name) || repo6.get("native");
+        let json = format.from(data.data);
+        this.loadDone(json);
+      } catch (e) {
+        this.error(e);
+      }
+    }
+    submit() {
+      localStorage.setItem(`${this.prefix}.format`, this.format.value);
+      super.submit();
+    }
+  };
+
   // .js/backend/webdav.js
   var WebDAV = class extends Backend {
     constructor() {
@@ -2558,7 +2599,7 @@ ${text}`);
     return node8.contains(document.activeElement);
   }
   function init11() {
-    [LocalUI, FirebaseUI, GDriveUI, FileUI, WebDAVUI, ImageUI].forEach((ctor) => {
+    [ServerFilesUI, LocalUI, FirebaseUI, GDriveUI, FileUI, WebDAVUI, ImageUI].forEach((ctor) => {
       let bui = new ctor();
       select6.append(bui.option);
     });

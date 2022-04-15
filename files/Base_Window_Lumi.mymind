@@ -1,0 +1,234 @@
+{
+	"root": {
+		"id": "nlpqpznl",
+		"text": "Рекуператор Vakio Base/Window/Lumi",
+		"notes": "",
+		"value": 1,
+		"layout": "map",
+		"children": [
+			{
+				"id": "cllfyuwn",
+				"text": "Не дует воздух/слабо дует",
+				"notes": "",
+				"side": "right",
+				"layout": "graph-bottom",
+				"children": [
+					{
+						"id": "cazihvpd",
+						"text": "Посмотрите видео и ответьте на вопрос.<br>Ваш дефект совпадает с неисправностью показанной в видео?",
+						"notes": "",
+						"children": [
+							{
+								"id": "lwtwwcjh",
+								"text": "Да",
+								"notes": "",
+								"children": [
+									{
+										"id": "znvmnnhy",
+										"text": "Необходима замена Блока питания аналогичный блок питания 12V 3A<br>Вашему Вакио более 2х лет",
+										"notes": "",
+										"value": 2,
+										"children": [
+											{
+												"id": "otswakkt",
+												"text": "Да",
+												"notes": "",
+												"children": [
+													{
+														"id": "cwypcqbr",
+														"text": "Ссылка на скрытую страницу с БП",
+														"notes": ""
+													}
+												]
+											},
+											{
+												"id": "ihpibaen",
+												"text": "Нет",
+												"notes": "",
+												"children": [
+													{
+														"id": "lnkhwwwi",
+														"text": "Ожидайте связи со службой заботы о клиентах",
+														"notes": "",
+														"value": 3
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "frnhdwfs",
+								"text": "Нет",
+								"notes": "",
+								"value": 1
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": "tnfhzgyx",
+				"text": "Мигает и не работает",
+				"notes": "",
+				"side": "left",
+				"layout": "graph-bottom",
+				"children": [
+					{
+						"id": "rtocbaws",
+						"text": "Посмотрите видео по ссылке для определения&nbsp;<br>причины неисправности",
+						"notes": "",
+						"children": [
+							{
+								"id": "ozfzjsru",
+								"text": "Требуется замена Вентиляционного блока.<br>Вашему Вакио более 2х лет?",
+								"notes": "",
+								"value": 4,
+								"layout": "graph-bottom",
+								"children": [
+									{
+										"id": "zapajptm",
+										"text": "Да",
+										"notes": "",
+										"children": [
+											{
+												"id": "mjmykbek",
+												"text": "Ссылка на скрытую страницу покупки ВБ",
+												"notes": "",
+												"value": "(null)"
+											}
+										]
+									},
+									{
+										"id": "nnxzhcnq",
+										"text": "Нет",
+										"notes": "",
+										"value": 3
+									}
+								]
+							},
+							{
+								"id": "eutepczc",
+								"text": "Неисправен блок питания.<br>",
+								"notes": "",
+								"value": 2
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": "ovgssbjp",
+				"text": "Не меняется направление потока воздуха",
+				"notes": "",
+				"side": "right",
+				"layout": "graph-bottom",
+				"children": [
+					{
+						"id": "ppwjxihb",
+						"text": "Посмотрите видео и ответьте на вопрос.<br>Как работает вентилятор и как происходит разворот вентилятора",
+						"notes": "",
+						"children": [
+							{
+								"id": "txcjqsop",
+								"text": "Вентилятор работает на низких оборотах<br> и вентилятор застревает при развороте",
+								"notes": "",
+								"value": 2
+							},
+							{
+								"id": "zszmuwjr",
+								"text": "Вентилятор работает на максимальных оборотах<br>не регулирует их и не разворачивается.",
+								"notes": "",
+								"children": [
+									{
+										"id": "iepryvfd",
+										"text": "Неисправен Электронный блок управления<br>Вашему Вакио более 2х лет",
+										"notes": "",
+										"children": [
+											{
+												"id": "aqweaniq",
+												"text": "Да",
+												"notes": "",
+												"children": [
+													{
+														"id": "xlvpapri",
+														"text": "Купить новый",
+														"notes": "",
+														"children": [
+															{
+																"id": "mtepcmzf",
+																"text": "Ссылка на скрытую страницу продажи&nbsp;<br>Электронного блока управления",
+																"notes": ""
+															}
+														]
+													},
+													{
+														"id": "gpqkpmwv",
+														"text": "Отремонтировать&nbsp;",
+														"notes": "",
+														"value": 3
+													}
+												]
+											},
+											{
+												"id": "zwojahol",
+												"text": "Нет",
+												"notes": "",
+												"value": 3
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "imyqxsjr",
+								"text": "Вентилятор нормально работает, <br>но не разворачивается",
+								"notes": "",
+								"children": [
+									{
+										"id": "mzjntsib",
+										"text": "Неисправен Шаговый двигатель <br>вентиляционного блока.<br>Вашему Вакио более 2х лет?",
+										"notes": "",
+										"children": [
+											{
+												"id": "vnquyfyx",
+												"text": "Да",
+												"notes": "",
+												"children": [
+													{
+														"id": "iearlkun",
+														"text": "Купить новый&nbsp;",
+														"notes": "",
+														"value": 4
+													},
+													{
+														"id": "tipulzoe",
+														"text": "Отремонтировать",
+														"notes": "",
+														"value": 3
+													}
+												]
+											},
+											{
+												"id": "bzotcnrj",
+												"text": "Нет",
+												"notes": ""
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": "qfalrikk",
+				"text": "Не включается/не дует",
+				"notes": "",
+				"side": "left"
+			}
+		]
+	}
+}
