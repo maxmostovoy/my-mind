@@ -13,19 +13,44 @@
 	</head>
 	<body>
 		<script>
+		// try {
+		// 	fetch("http://51.250.105.197/portal_auth/public/api/user/get", {
+		// 	headers: {
+		// 		"Content-Type": "application/json",
+		// 		"Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NjBkNmI1MC01YWQ1LTRjMjYtOWZlOS03OTdmZTQ4MDliNmMiLCJqdGkiOiJkMmY3ZTc1YWE2NzhiNjliMzBlNWEzNGY1ZWFkNzE2NzBhY2RkOThlM2MxMzk2MTYxZDY4NGNlZTVlZDAxN2E1ODZjYWQ2Nzk4YTcxYmRhOSIsImlhdCI6MTY0OTg0NjcyNi40NzQ4MTUsIm5iZiI6MTY0OTg0NjcyNi40NzQ4MjIsImV4cCI6MTY1MTE0MjcyNi40MTU3MTYsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.ByZYDDq7ubnmRxw5GHd0G5PGJOKxhOVzQTZsyeTGpqJYbHt9Fl3KWRQTcUWVvvch9az1rSpT1lUYH_lLN_yz8w2DYF-RmjN7QQSOShAF1kPsCuy0wIMx3J5Z9p0_K_msHyxQfuWW8HoBRgTAxSd3EX8I_ykh9bnf5Qsx3VmWaeewi0t-oe0lNpaBMD2iEbfPFxoGzvPG-YmMMQ9ZbHKOzFjomH35ANDlyG99sTrmr14pmlK-9dPggixpUggMQe0_fywyN4o35Rucwvo88eR5yOUugJDu8j8WEmM-08GKcltMEvjRDTcsBu3UAGQSsrsXJ_1hBM7n_08bvx80FOvrFVYBy0hMLgQ64gNwJ7igNooFqftA68UhlIjp4K2_1aErKRK2CRJZwuSdidb5IfQUIhA7OBxsQI6-m709Y2CRL4D8lEaWjEwtmOh97LdZbK6uiXeK3MtiuSOaZRMY7ks3vXCH3YDvLWkmbJ7YMTcrhNdyqPCU06gL2_ssJsaCPwTc_-APqxwj6c8aNwpR4AgSwjpWWjrvJ_ge3A6RK2VwXC7Q3yGj1UpvM0VpfpZZnEXkjAJhzbW3v2DxhQGtORGDmgujhfG8Dx9_GW8WCMY1t0tTFQv_TxbpfWvqhEfligF5-OOa50trB50DcG3boPDAvnaeD3pm5aEgL_4WmCy4_Vc"
+		// 	},
+		// 	// credentials: "include",
+		// 	method: "GET",
+		// 	})
+		// 	.then((response) => response.json())
+		// 	.then((json) => {
+		// 		console.log(json);
+
+		// 	});
+		// } catch (err) {
+		// 	console.log(err);
+		// 	signOut();
+		// 	history.push("/signin");
+		// }
 		try {
-			fetch("http://51.250.105.197/portal_auth/public/api/user/get", {
+			var data = {
+				"grant_type": "password",
+				"client_id": "960d6b50-5ad5-4c26-9fe9-797fe4809b6c",
+				"client_secret": "tl6piAtLny5ppzapzFVVqb22z6Jg0b3SKN3WFbzb",
+				"username": "max.mostovoy@gmail.com",
+				"password": "12345678"
+			};
+			fetch("http://51.250.105.197/portal_auth/public/oauth/token", {
 			headers: {
 				"Content-Type": "application/json",
-				"Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NjBkNmI1MC01YWQ1LTRjMjYtOWZlOS03OTdmZTQ4MDliNmMiLCJqdGkiOiJkMmY3ZTc1YWE2NzhiNjliMzBlNWEzNGY1ZWFkNzE2NzBhY2RkOThlM2MxMzk2MTYxZDY4NGNlZTVlZDAxN2E1ODZjYWQ2Nzk4YTcxYmRhOSIsImlhdCI6MTY0OTg0NjcyNi40NzQ4MTUsIm5iZiI6MTY0OTg0NjcyNi40NzQ4MjIsImV4cCI6MTY1MTE0MjcyNi40MTU3MTYsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.ByZYDDq7ubnmRxw5GHd0G5PGJOKxhOVzQTZsyeTGpqJYbHt9Fl3KWRQTcUWVvvch9az1rSpT1lUYH_lLN_yz8w2DYF-RmjN7QQSOShAF1kPsCuy0wIMx3J5Z9p0_K_msHyxQfuWW8HoBRgTAxSd3EX8I_ykh9bnf5Qsx3VmWaeewi0t-oe0lNpaBMD2iEbfPFxoGzvPG-YmMMQ9ZbHKOzFjomH35ANDlyG99sTrmr14pmlK-9dPggixpUggMQe0_fywyN4o35Rucwvo88eR5yOUugJDu8j8WEmM-08GKcltMEvjRDTcsBu3UAGQSsrsXJ_1hBM7n_08bvx80FOvrFVYBy0hMLgQ64gNwJ7igNooFqftA68UhlIjp4K2_1aErKRK2CRJZwuSdidb5IfQUIhA7OBxsQI6-m709Y2CRL4D8lEaWjEwtmOh97LdZbK6uiXeK3MtiuSOaZRMY7ks3vXCH3YDvLWkmbJ7YMTcrhNdyqPCU06gL2_ssJsaCPwTc_-APqxwj6c8aNwpR4AgSwjpWWjrvJ_ge3A6RK2VwXC7Q3yGj1UpvM0VpfpZZnEXkjAJhzbW3v2DxhQGtORGDmgujhfG8Dx9_GW8WCMY1t0tTFQv_TxbpfWvqhEfligF5-OOa50trB50DcG3boPDAvnaeD3pm5aEgL_4WmCy4_Vc"
 			},
-			// credentials: "include",
-			method: "GET",
+			//credentials: "same-origin",
+			method: "POST",
+			body: JSON.stringify(data)
 			})
 			.then((response) => response.json())
 			.then((json) => {
 				console.log(json);
-
 			});
 		} catch (err) {
 			console.log(err);
